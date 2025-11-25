@@ -1,8 +1,25 @@
+import { use } from 'react';
 import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../../provider/authContext';
+import Swal from 'sweetalert2';
 
 const Navbar = () => {
+    const { user, logout } = use(AuthContext)
+
+    const handleLogout = () => {
+        logout().then(() => {
+            Swal.fire({
+                title: "You Logged Out Successfully",
+                icon: "success",
+                confirmButtonColor: "#67AB4F"
+            });
+        }).catch((error) => {
+            console.log(error)
+        });
+    }
+
     return (
-        <nav className="flex justify-between items-center  sticky top-0 z-10 pt-3 px-6">
+        <nav className="flex justify-between items-center pt-3 px-6 bg-base-200">
             <div className="flex py-3">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -46,7 +63,41 @@ const Navbar = () => {
                     </div> */}
                 </ul>
             </nav>
-            <Link to='/login' className="btn btn-primary font-bold text-white hover:bg-secondary">Login / SignUp</Link>
+            {
+                user ?
+                    <div className="dropdown dropdown-end">
+                        <div tabIndex={0} role="button" className="m-1">
+                            <img
+                                className="w-[42px] h-[42px] rounded-full cursor-pointer ring-2 ring-primary/40 hover:ring-primary transition"
+                                src={user.photoURL}
+                                alt="profile"
+                            />
+                        </div>
+
+                        <ul
+                            tabIndex={0}
+                            className="dropdown-content menu bg-base-100 rounded-xl shadow-lg border border-primary w-56 p-4">
+                            <li className="pointer-events-none!">
+                                <p className="font-semibold text-lg text-gray-800">{user.displayName}
+                                </p>
+                            </li>
+                            <li className="pointer-events-none!">
+                                <p className="text-sm text-gray-500">{user.email}</p>
+                            </li>
+
+                            <div className="divider my-1"></div>
+                            <li>
+                                <button
+                                    onClick={handleLogout}
+                                    className="btn btn-primary btn-sm text-white w-full rounded-lg shadow hover:bg-secondary">Log Out
+                                </button>
+                            </li>
+
+                        </ul>
+                    </div>
+                    :
+                    <Link to='/login' className="btn btn-primary font-bold text-white hover:bg-secondary">Login / SignUp</Link>
+            }
         </nav>
     );
 };
