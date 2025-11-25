@@ -7,9 +7,6 @@ import Root from './Root/Root.jsx';
 import Home from './Pages/Home.jsx';
 import AddCar from './Pages/AddCar.jsx';
 import Login from './Pages/Login.jsx';
-import Registration from './Pages/Registration.jsx';
-import AuthProvider from './provider/AuthProvider.jsx';
-
 
 const router = createBrowserRouter([
   {
@@ -28,10 +25,6 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element: <Login></Login>
-      },
-      {
-        path:'/registration',
-        element:<Registration></Registration>
       }
     ]
   },
@@ -39,8 +32,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AuthProvider>
-          <RouterProvider router={router} />
-    </AuthProvider>
-  </StrictMode>,
+           <RouterProvider router={router} />
+   </StrictMode>,
 )
