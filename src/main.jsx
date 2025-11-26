@@ -14,6 +14,7 @@ import MyListing from './Pages/MyListing.jsx';
 import MyBooking from './Pages/MyBooking.jsx';
 import AllCars from './Pages/AllCars.jsx';
 import Error from './Pages/Error.jsx';
+import AboutUs from './Components/homeLayout/AboutUs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
           <MyBooking></MyBooking>
         </PrivateRoutes>
       },
+      {
+        path:'/aboutUs',
+        element:<AboutUs></AboutUs>
+      }
     ]
   },
   {

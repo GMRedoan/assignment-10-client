@@ -20,7 +20,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="flex justify-between items-center pt-3 px-6 bg-base-200">
+        <nav className="pr-4 md:px-6 flex justify-between items-center pt-3  bg-base-200">
             <div className="flex py-3">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -33,19 +33,28 @@ const Navbar = () => {
                             <NavLink to='/'><li>Home</li></NavLink>
                         </div>
                         <div className='flex items-center gap-1 text-xl'>
-                            <NavLink to='/shop'><li>Shop</li></NavLink>
+                            <NavLink to='addCar'><li>Add Car</li></NavLink>
                         </div>
                         <div className='flex items-center gap-1 text-xl'>
-                            <NavLink to='/blog'><li>Blog</li></NavLink>
+                            <NavLink to='allCars'><li>Browse Cars</li></NavLink>
                         </div>
-                        <div className='flex items-center gap-1 text-xl'>
-                            <NavLink to='/contact'><li>Contact</li></NavLink>
-                        </div>
-                    </ul>
+                        {
+                            user &&
+                            <div className='flex items-center gap-1 text-xl'>
+                                <NavLink to='myListing'><li>My Listing</li></NavLink>
+                            </div>
+                        }
+                        {
+                            user &&
+                            <div className='flex items-center gap-1 text-xl'>
+                                <NavLink to='myBooking'><li>My Booking</li></NavLink>
+                            </div>
+                        }
+                     </ul>
                 </div>
-                <Link to='/' className='flex justify-center items-center'>
-                    <img className='w-[82px]' src={logo} alt="" />
-                    <p className="mt-2 md:mt-0 md:text-3xl font-bold">Rent<span className='font-normal text-primary text-2xl'>wheels</span></p>
+                <Link to='/' className='flex justify-center md:items-center'>
+                    <img className='w-[42px] md:w-[82px]' src={logo} alt="" />
+                    <p className="mt-2 md:mt-0 md:text-3xl font-bold">Rent<span className='md:text-2xl font-normal text-primary'>wheels</span></p>
                 </Link>
             </div>
             <nav className="navbar-center hidden lg:flex">
