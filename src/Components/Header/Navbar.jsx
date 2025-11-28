@@ -6,7 +6,8 @@ import logo from '/logo.png'
 import Loading from '../../Pages/Loading';
 
 const Navbar = () => {
-    const { user, logout  } = use(AuthContext)
+    const { user, logout 
+     } = use(AuthContext)
 
     const handleLogout = () => {
         logout().then(() => {
@@ -20,13 +21,6 @@ const Navbar = () => {
         });
     }
 
-//       if (loading) {
-//         return (
-//  <div>
-//     <Loading></Loading>
-//  </div>
-//         );
-//     }
     return (
         <nav className="pr-4 md:px-6 flex justify-between items-center pt-3  bg-base-200 sticky top-0 z-10">
             <div className="flex py-3">

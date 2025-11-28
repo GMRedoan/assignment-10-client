@@ -60,10 +60,12 @@ const router = createBrowserRouter([
         </PrivateRoutes>
       },
       {
-        path: '/carDetails',
+        path: '/carDetails/:id',
+        loader: ({params}) => fetch(`http://localhost:3000/cars/${params.id}`),
         element: <PrivateRoutes>
           <CarDetails></CarDetails>
-        </PrivateRoutes>
+        </PrivateRoutes>,
+        hydrateFallbackElement: <Loading></Loading>
       },
       {
         path:'/aboutUs',

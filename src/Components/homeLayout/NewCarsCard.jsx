@@ -30,7 +30,7 @@ const NewCarsCard = ({ car }) => {
           <span className="font-semibold">Provider:</span> {car.providerName}
         </p>
 
-        <Link to='/carDetails' className="btn btn-primary text-white w-full mt-3 rounded-xl hover:bg-secondary">
+        <Link to={`/carDetails/${car._id}`} className="btn btn-primary text-white w-full mt-3 rounded-xl hover:bg-secondary">
           View Details
         </Link>
       </div>
