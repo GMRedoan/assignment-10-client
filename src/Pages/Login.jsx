@@ -10,6 +10,7 @@ const Login = () => {
     const notify = (msg) => toast.error(msg);
     const navigate = useNavigate()
     const location = useLocation()
+    const from = location.state || "/";
 
     // log in
     const handleLogin = (e) => {
@@ -61,6 +62,7 @@ const Login = () => {
                     icon: "success",
                     confirmButtonColor: "#67AB4F"
                 });
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 notify(error)

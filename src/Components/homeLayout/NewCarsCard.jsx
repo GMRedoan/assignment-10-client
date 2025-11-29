@@ -23,11 +23,11 @@ const NewCarsCard = ({ car }) => {
         </p>
 
         <p className="text-accent ">
-          <span className="font-semibold">Car Type:</span> {car.carType}
+          <span className="font-semibold">Car Type:</span> <span className="font-bold text-red-500">{car.carType}</span>
         </p>
 
         <p className="text-accent">
-          <span className="font-semibold">Provider:</span> {car.providerName}
+          <span className="font-semibold">Provider:</span> <span className="text-black font-bold">{car.providerName}</span>
         </p>
 
         <Link to={`/carDetails/${car._id}`} className="btn btn-primary text-white w-full mt-3 rounded-xl hover:bg-secondary">

@@ -17,7 +17,7 @@ import Error from './Pages/Error.jsx';
 import AboutUs from './Components/homeLayout/AboutUs.jsx';
 import CarDetails from './Pages/CarDetails.jsx';
 import Loading from './Pages/Loading.jsx';
-
+ 
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,8 +36,8 @@ const router = createBrowserRouter([
         </PrivateRoutes>
       },
       {
-        path:'/allCars',
-        element:<AllCars></AllCars>
+        path: '/allCars',
+        element: <AllCars></AllCars>
       },
       {
         path: '/login',
@@ -61,28 +61,28 @@ const router = createBrowserRouter([
       },
       {
         path: '/carDetails/:id',
-        loader: ({params}) => fetch(`http://localhost:3000/cars/${params.id}`),
+        loader: ({ params }) => fetch(`http://localhost:3000/cars/${params.id}`),
         element: <PrivateRoutes>
           <CarDetails></CarDetails>
         </PrivateRoutes>,
         hydrateFallbackElement: <Loading></Loading>
       },
       {
-        path:'/aboutUs',
-        element:<AboutUs></AboutUs>
+        path: '/aboutUs',
+        element: <AboutUs></AboutUs>
       }
     ]
   },
   {
-    path:'/*',
-    element:<Error></Error>
+    path: '/*',
+    element: <Error></Error>
   }
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
-    </AuthProvider>
+         <RouterProvider router={router} />
+     </AuthProvider>
   </StrictMode>,
 )

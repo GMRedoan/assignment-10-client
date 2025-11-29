@@ -12,7 +12,8 @@ const Home = () => {
     const newCars = use(newCarsPromise)
     return (
         <div>
-            <Banner></Banner>
+            <title>Rent Wheels</title>
+             <Banner></Banner>
             <Slides></Slides>
             <div>
                 <div>

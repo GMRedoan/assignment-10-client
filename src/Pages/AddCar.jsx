@@ -1,6 +1,7 @@
 import { use } from "react";
 import { AuthContext } from "../provider/authContext";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const AddCar = () => {
     const { user } = use(AuthContext)
@@ -14,10 +15,11 @@ const AddCar = () => {
         const photoURL = form.photoURL.value
         const providerName = form.providerName.value
         const email = form.email.value
+        const status = form.status.value
         const description = form.description.value
 
         const newCars = {
-            carName, carType, rentPricePerDay, location, photoURL, description, providerName, email
+            carName, carType, rentPricePerDay, location, photoURL, description, providerName, email, status
         }
 
         // save new added car info in the database
@@ -42,9 +44,10 @@ const AddCar = () => {
     }
     return (
         <section className="px-6 py-10 bg-base-200">
+                             <title>Add Your Car</title>
+             
             <div className="max-w-7xl mx-auto">
                 <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-xl">
-                    {/* Top row: 3 columns on lg, 2 on md, 1 on mobile */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div>
                             <label className="label">
@@ -138,6 +141,17 @@ const AddCar = () => {
                                 defaultValue={user.email}
                                 className="input input-bordered w-full bg-gray-50" />
                         </div>
+                         <div>
+                            <label className="label">
+                                <span className="label-text font-medium">Status</span>
+                            </label>
+                            <input
+                                readOnly
+                                name="status"
+                                defaultValue= "available"
+                                className="input input-bordered w-full bg-gray-50" />
+                        </div>
+
                     </div>
 
                     <div className="mt-6">
@@ -147,7 +161,7 @@ const AddCar = () => {
                         </label>
                         <textarea
                             required
-                            // minLength={30}
+                            minLength={30}
                             name="description"
                             placeholder="Short description about the car, features, fuel type, condition..."
                             className="textarea textarea-bordered w-full min-h-[140px]"
@@ -155,7 +169,7 @@ const AddCar = () => {
                     </div>
 
                     <div className="mt-8 flex justify-center">
-                        <button type="submit" className="btn btn-primary hover:bg-secondary text-white px-8">
+                        <button type="submit" className="btn btn-primary hover:bg-secondary text-white px-18">
                             Submit Car
                         </button>
                     </div>

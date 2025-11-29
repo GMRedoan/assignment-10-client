@@ -1,12 +1,76 @@
+import { FaEnvelope, FaMapMarkerAlt, FaUser } from 'react-icons/fa';
+import { IoCarSportSharp } from 'react-icons/io5';
 import { useLoaderData } from 'react-router';
 
 const CarDetails = () => {
     const car = useLoaderData()
     return (
-        <div>
-            <h2>car name : {car.carName}</h2>
-        </div>
+        <section>
+                 <title>{car.carName}</title>
+             <div>
+
+                <h2 className='text-3xl md:text-5xl font-bold text-center py-8'> Car Information <span className='text-primary'>&</span> Rental Summary</h2>
+                <p className='text-accent font-semibold text-center'>See important details, availability, and provider info to make your booking decision easier.</p>
+            </div>
+
+            <div className='px-4 py-10 md:py-18'>
+                <div className="max-w-6xl mx-auto border border-accent rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden bg-white flex flex-col md:flex-row">
+
+                    <div className="md:w-1/2 w-full">
+                        <img
+                            src={car.photoURL}
+                            alt={car.carName}
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+
+                    <div className="md:w-1/2 w-full p-6 space-y-6 flex flex-col justify-between">
+
+                        <div className="space-y-3">
+                            <h2 className="text-3xl font-bold flex items-center gap-2">
+                                <IoCarSportSharp className='text-accent' /> {car.carName}
+                            </h2>
+
+                            <div className="flex justify-between items-center">
+                                <span className="badge bg-gray-200 font-bold text-red-500">{car.carType}</span>
+                                <span
+                                    className={`badge ${car.status === "available" ? "badge-success" : "badge-error"
+                                        }`}>
+                                    {car.status}
+                                </span>
+                            </div>
+
+                            <p className="text-accent">{car.description}</p>
+
+                            <p className="text-lg font-semibold">
+                                <span className='text-accent'>Rent Price:</span> <span className='font-bold'>৳{car.rentPricePerDay}</span> <span className='text-accent'>/day</span>
+                            </p>
+
+                            <div className="flex items-center gap-2 text-gray-700">
+                                <FaMapMarkerAlt /> {car.location}
+                            </div>
+
+                            <div className="bg-gray-100 rounded-xl p-3 space-y-1">
+                                <p className="flex items-center gap-2 font-medium">
+                                    <FaUser /> {car.providerName}
+                                </p>
+                                <p className="flex items-center gap-2 text-blue-600">
+                                    <FaEnvelope /> {car.providerEmail || car.email}
+                                </p>
+                            </div>
+                        </div>
+
+                        <button className="btn btn-primary w-full rounded-xl text-white hover:bg-secondary">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
     );
 };
 
 export default CarDetails;
+

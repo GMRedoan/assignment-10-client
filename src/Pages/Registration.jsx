@@ -67,7 +67,7 @@ const Registration = () => {
                 const user = result.user
                 setUser(user)
                 form.reset()
-                navigate("/")
+                navigate('/')
             })
             .catch(() => {
                 setError("Invalid Email")
@@ -102,6 +102,7 @@ const Registration = () => {
                     icon: "success",
                     confirmButtonColor: "#67AB4F"
                 });
+                navigate('/')
             })
             .catch(error => {
                 notify(error)

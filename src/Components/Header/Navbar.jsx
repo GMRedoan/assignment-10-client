@@ -1,22 +1,26 @@
 import { use } from 'react';
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../../provider/authContext';
 import Swal from 'sweetalert2';
 import logo from '/logo.png'
 import Loading from '../../Pages/Loading';
 
 const Navbar = () => {
+    const navigate = useNavigate()
     const { user, logout 
      } = use(AuthContext)
 
     const handleLogout = () => {
-        logout().then(() => {
+        logout()
+        .then(() => {
             Swal.fire({
                 title: "You Logged Out Successfully",
                 icon: "success",
                 confirmButtonColor: "#67AB4F"
             });
-        }).catch((error) => {
+            navigate('/')
+        })
+        .catch((error) => {
             console.log(error)
         });
     }
