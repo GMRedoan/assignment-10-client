@@ -1,4 +1,4 @@
-import { use } from 'react';
+import { use} from 'react';
 import { FaEnvelope, FaMapMarkerAlt, FaUser } from 'react-icons/fa';
 import { IoCarSportSharp } from 'react-icons/io5';
 import { useLoaderData } from 'react-router';
@@ -9,16 +9,9 @@ const CarDetails = () => {
     const car = useLoaderData()
     const { user } = use(AuthContext)
     const handleBook = () => {
-        const email = user.email
-        const carName = car.carName
-        const rentPricePerDay = car.rentPricePerDay
-        const carType = car.carType
-        const providerName = car.providerName
-        const providerEmail = car.providerEmail
-        const location = car.location
-
         const newBook = {
-             email, carName, rentPricePerDay, carType, providerName, providerEmail, location
+            email: user.email,
+            ...car
         }
         // save the booking data in the database
         fetch('http://localhost:3000/books', {
@@ -38,8 +31,7 @@ const CarDetails = () => {
             icon: "success",
             confirmButtonColor: "#67AB4F"
         });
-
-    }
+     }
     return (
         <section>
             <title>{car.carName}</title>
@@ -69,12 +61,13 @@ const CarDetails = () => {
 
                             <div className="flex justify-between items-center">
                                 <span className="badge bg-gray-200 font-bold text-red-500">{car.carType}</span>
-                                <span
-                                    className={`badge ${car.status === "available" ? "badge-success" : "badge-error"
-                                        }`}>
-                                    {car.status}
-                                </span>
-                            </div>
+
+                            {/* status */}
+                                 {
+                                    car.status == 'Booked' ? <div className='badge badge-warning'>{car.status}</div> : <div className='badge badge-success'>{car.status}</div>
+                                 }                         
+                                
+                                 </div>
 
                             <p className="text-accent">{car.description}</p>
 
@@ -96,8 +89,10 @@ const CarDetails = () => {
                             </div>
                         </div>
 
-                        <button onClick={handleBook} className="btn btn-primary w-full rounded-xl text-white hover:bg-secondary">
-                            Book Now
+                        <button
+                            onClick={handleBook}
+                            className='btn btn-primary text-white'>
+                                Book Now
                         </button>
                     </div>
                 </div>

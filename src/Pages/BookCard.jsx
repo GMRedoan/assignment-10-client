@@ -1,6 +1,5 @@
-import { FaEdit, FaTrash } from "react-icons/fa";
-
-const BookCard = ({ singleList }) => {
+ 
+const BookCard = ({ singleList, handleCancel }) => {
     return (
         <tr>
             <td className="md:pl-25 font-semibold">{singleList.carName}</td>
@@ -28,6 +27,11 @@ const BookCard = ({ singleList }) => {
                     {singleList.location}
                 </span>
             </td>
+
+            <button
+            onClick={() => handleCancel(singleList._id)} className="btn btn-sm btn-error mt-1 text-white font-semibold">
+                Cancel
+            </button>
 
         </tr>
     );
