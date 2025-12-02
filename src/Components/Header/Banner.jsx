@@ -9,7 +9,13 @@ const Banner = () => {
             <div className="max-w-6xl mx-auto px-5 py-15">
 
                 <p className="text-center text-sm md:text-base text-accent mb-6">
-                    Quick booking, great service, and trusted vehicles.
+                    <Typewriter
+                        words={['Quick booking, great service, and trusted vehicles.']}
+                        loop={1}
+                        cursor
+                        cursorStyle=" "
+                        typeSpeed={30}
+                    />
                 </p>
 
                 <h1 className="text-center font-extrabold text-4xl md:text-6xl tracking-tight leading-snug">
@@ -21,7 +27,7 @@ const Banner = () => {
                         cursor
                         cursorStyle=" "
                         typeSpeed={60}
-                     />
+                    />
 
                 </h1>
 
@@ -32,7 +38,7 @@ const Banner = () => {
                         cursor
                         cursorStyle=" "
                         typeSpeed={10}
-                     />
+                    />
                 </p>
 
                 <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-14 text-center">

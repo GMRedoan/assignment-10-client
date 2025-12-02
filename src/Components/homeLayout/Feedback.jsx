@@ -77,8 +77,8 @@ const Feedback = () => {
               </div>
             </div>
             <div>
-              <p className="font-semibold text-neutral">Michael R.</p>
-              <p className="text-neutral/60 text-sm">New York</p>
+              <p className="font-semibold text-neutral">MD Rubel</p>
+              <p className="text-neutral/60 text-sm">Dhaka</p>
             </div>
           </div>
         </div>
@@ -102,8 +102,8 @@ const Feedback = () => {
               </div>
             </div>
             <div>
-              <p className="font-semibold text-neutral">Nadine V.</p>
-              <p className="text-neutral/60 text-sm">Monaco</p>
+              <p className="font-semibold text-neutral">Nadim Khan</p>
+              <p className="text-neutral/60 text-sm">Barishal</p>
             </div>
           </div>
         </div>
@@ -128,8 +128,8 @@ const Feedback = () => {
               </div>
             </div>
             <div>
-              <p className="font-semibold text-neutral">Darius K.</p>
-              <p className="text-neutral/60 text-sm">Dubai</p>
+              <p className="font-semibold text-neutral">Dr. Enan</p>
+              <p className="text-neutral/60 text-sm">Rajshahi</p>
             </div>
           </div>
         </div>
