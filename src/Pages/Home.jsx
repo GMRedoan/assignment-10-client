@@ -18,8 +18,8 @@ const Home = () => {
             <Slides></Slides>
             <div>
                 <div>
-                    <h2 className='text-6xl font-bold text-center py-10 pt-20'> <span className='text-primary'>Newest</span> Cars For You</h2>
-                    <p className='text-accent font-semibold text-center'>Explore the latest arrivals curated for comfort, style, and performance.</p>
+                    <h2 className='text-4xl md:text-6xl font-bold text-center py-10 pt-20'> <span className='text-primary'>Newest</span> Cars For You</h2>
+                    <p className='px-4 text-accent font-semibold text-center'>Explore the latest arrivals curated for comfort, style, and performance.</p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 max-w-7xl mx-auto py-10 px-4">
                     {

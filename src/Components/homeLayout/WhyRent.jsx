@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 const WhyRent = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center gap-8 px-12 py-26 bg-base-200">
+    <div className=" flex flex-col md:flex-row items-center gap-8 px-12 py-6 md:py-26 bg-base-200">
       <div className="md:w-1/2">
         <h2 className="text-3xl font-semibold mb-8">Why <span className="text-primary">Rent</span> With Us?</h2>
         <ul className="space-y-4">

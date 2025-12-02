@@ -175,7 +175,7 @@ const ListCard = ({ singleList, handleDelate }) => {
                   />
                 </div>
 
-                <div className="mt-8 flex justify-center gap-3">
+                <div className="flex justify-center items-center gap-3">
                   <button type="submit" className="btn btn-primary hover:bg-secondary text-white px-14">
                     Update Car
                   </button>

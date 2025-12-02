@@ -3,8 +3,8 @@ import { FaCar, FaComments, FaFlag, FaHeart } from "react-icons/fa";
 const Feedback = () => {
   return (
 <div className="pt-5 pb-15 bg-base-200">
-      <section className="py-20 mb-20 bg-gray-200">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-center px-6">
+      <section className="rounded-xl py-10 mx-4 md:mx-0 md:py-20 mb-20 bg-gray-200">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center px-6">
           <div className="group transition duration-300 cursor-pointer">
           <FaHeart className="text-6xl mx-auto text-accent group-hover:text-primary transition duration-300" />
           <h3 className="text-3xl font-semibold text-gray-700 group-hover:text-primary transition duration-300 mt-4">
@@ -51,7 +51,7 @@ const Feedback = () => {
 
       <section>
       <div className="text-center mb-16 px-4">
-        <h2 className="text-5xl font-bold text-neutral">
+        <h2 className="text-4xl md:text-6xl font-bold text-neutral">
           Loved by Hundreds of <span className="text-primary">Happy Clients</span>
         </h2>
       </div>

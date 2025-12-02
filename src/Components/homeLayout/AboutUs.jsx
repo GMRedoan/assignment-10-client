@@ -3,7 +3,8 @@ import { Link } from "react-router";
 
 const AboutUs = () => {
     return (
-        <section className="px-6 py-16 bg-base-200 text-gray-700">
+
+        <section className="py-6 md:py-16 px-6 bg-base-200 text-gray-700">
             <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-20 justify-center items-center">
                 <div>
                     <h2 className="text-4xl font-bold mb-6 text-gray-900">About <span className="text-primary">Us</span></h2>

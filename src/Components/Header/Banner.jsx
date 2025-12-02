@@ -6,7 +6,7 @@ import { Typewriter } from 'react-simple-typewriter'
 const Banner = () => {
     return (
         <section className="w-full bg-base-200 border-b border-gray-300">
-            <div className="max-w-6xl mx-auto px-5 py-15">
+            <div className="py-10 md:py-15 max-w-6xl mx-auto px-5">
 
                 <p className="text-center text-sm md:text-base text-accent mb-6">
                     <Typewriter
@@ -41,7 +41,7 @@ const Banner = () => {
                     />
                 </p>
 
-                <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-14 text-center">
+                <div className="mt-5 md:mt-12 flex flex-col md:flex-row items-center justify-center gap-14 text-center">
 
                     <div>
                         <h3 className="text-lg font-semibold">Power Elite Author</h3>
@@ -50,9 +50,9 @@ const Banner = () => {
 
                     <div className="hidden md:block h-10 border-l border-gray-300"></div>
 
-                    <div>
+                    <div className="-mt-6 md:mt-0">
                         <h3 className="text-lg font-semibold">Total rents 27,000+</h3>
-                        <div className="flex items-center gap-2 mt-2">
+                        <div className="flex justify-center items-center gap-2 mt-2">
                             <FaStar className="text-yellow-400" />
                             <FaStar className="text-yellow-400" />
                             <FaStar className="text-yellow-400" />
