@@ -28,14 +28,14 @@ const AllCars = () => {
                 <p className='text-accent font-semibold text-center'>Find the perfect ride for any trip with our full range of reliable, well-maintained vehicles.</p>
             </div>
 
-
             <div className='flex justify-between items-center mx-22 pt-10'>
                 <p></p>
                 <label className="input border border-gray-300 outline-primary">
                     <IoSearchOutline />
                     <input
                         type="search"
-                        required placeholder="Search"
+                        required 
+                        placeholder="Search Your Car"
                         value={search}
                         onChange={(e) => handleLoading(e.target.value)}
                     />
