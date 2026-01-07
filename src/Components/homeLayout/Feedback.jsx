@@ -3,9 +3,9 @@ import { FaCar, FaComments, FaFlag, FaHeart } from "react-icons/fa";
 const Feedback = () => {
   return (
 <div className="pt-5 pb-15 bg-base-200">
-      <section className="rounded-xl py-10 mx-4 md:mx-0 md:py-20 mb-20 bg-gray-200">
+      <section data-aos="zoom-in" className="rounded-xl py-10 mx-4 md:mx-0 md:py-20 mb-20 bg-gray-300">
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center px-6">
-          <div className="group transition duration-300 cursor-pointer">
+          <div className="group transition duration-300 cursor-pointer hover:scale-[1.03]">
           <FaHeart className="text-6xl mx-auto text-accent group-hover:text-primary transition duration-300" />
           <h3 className="text-3xl font-semibold text-gray-700 group-hover:text-primary transition duration-300 mt-4">
             5567
@@ -15,7 +15,7 @@ const Feedback = () => {
           </p>
         </div>
 
-        <div className="group transition duration-300 cursor-pointer">
+        <div className="group transition duration-300 cursor-pointer hover:scale-[1.03]">
           <FaCar className="text-6xl mx-auto text-gray-500 group-hover:text-primary  transition duration-300" />
           <h3 className="text-3xl font-semibold text-gray-700 group-hover:text-primary  transition duration-300 mt-4">
             657
@@ -25,7 +25,7 @@ const Feedback = () => {
           </p>
         </div>
 
-        <div className="group transition duration-300 cursor-pointer">
+        <div className="group transition duration-300 cursor-pointer hover:scale-[1.03]">
           <FaFlag className="text-6xl mx-auto text-gray-500 group-hover:text-primary  transition duration-300" />
           <h3 className="text-3xl font-semibold text-gray-700 group-hover:text-primary  transition duration-300 mt-4">
             1,255,657
@@ -35,7 +35,7 @@ const Feedback = () => {
           </p>
         </div>
 
-        <div className="group transition duration-300 cursor-pointer">
+        <div className="group transition duration-300 cursor-pointer hover:scale-[1.03]">
           <FaComments className="text-6xl mx-auto text-gray-500 group-hover:text-primary  transition duration-300" />
           <h3 className="text-3xl font-semibold text-gray-700 group-hover:text-primary  transition duration-300 mt-4">
             1255
@@ -51,24 +51,24 @@ const Feedback = () => {
 
       <section>
       <div className="text-center mb-16 px-4">
-        <h2 className="text-4xl md:text-6xl font-bold">
+        <h2 data-aos="zoom-in" className="text-4xl md:text-5xl font-bold">
           Loved by Hundreds of <span className="text-primary">Happy Clients</span>
         </h2>
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
-        <div className="card bg-white shadow-xl border border-base-200 p-8 rounded-2xl">
-          <h3 className="text-xl font-semibold text-neutral mb-4">
+      <div data-aos="zoom-in" className="mx-4 md:mx-12 grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+        <div className="card bg-base-100 shadow-xl border border-base-200 p-8 rounded-2xl hover:scale-[1.03] transition-all duration-300 hover:shadow-2xl">
+          <h3 className="text-xl font-semibold mb-4">
             Professionalism that matches the highest executive standards.
           </h3>
 
-          <p className="text-base text-neutral/70">
+          <p className="text-base text-accent">
             As someone who deals with high-level clients daily, I recognize
             quality immediately. The team behind Rent Wheel delivers not just
             comfort, but confidence.
           </p>
 
-          <div className="border-t border-base-200 my-6"></div>
+          <div className="border-t border-base-300 my-6"></div>
 
           <div className="flex items-center gap-4">
             <div className="avatar">
@@ -77,23 +77,23 @@ const Feedback = () => {
               </div>
             </div>
             <div>
-              <p className="font-semibold text-neutral">MD Rubel</p>
-              <p className="text-neutral/60 text-sm">Dhaka</p>
+              <p className="font-semibold">MD Rubel</p>
+              <p className="text-accent text-sm">Dhaka</p>
             </div>
           </div>
         </div>
 
-        <div className="card bg-white shadow-xl border border-base-200 p-8 rounded-2xl">
-          <h3 className="text-xl font-semibold text-neutral mb-4">
+        <div className="card bg-base-100 shadow-xl border border-base-200 p-8 rounded-2xl  hover:scale-[1.03] transition-all duration-300 hover:shadow-2xl">
+          <h3 className="text-xl font-semibold mb-4">
             It felt less like renting, more like being chauffeured by my own staff.
           </h3>
 
-          <p className="text-base text-neutral/70">
+          <p className="text-base text-accent">
             There’s a distinct difference between premium and personal, and this
             service blends both. The attention to my preferences was impressive.
           </p>
 
-          <div className="border-t border-base-200 my-6"></div>
+          <div className="border-t border-base-300 my-6"></div>
 
           <div className="flex items-center gap-4">
             <div className="avatar">
@@ -102,24 +102,24 @@ const Feedback = () => {
               </div>
             </div>
             <div>
-              <p className="font-semibold text-neutral">Nadim Khan</p>
-              <p className="text-neutral/60 text-sm">Barishal</p>
+              <p className="font-semibold">Nadim Khan</p>
+              <p className="text-accent text-sm">Barishal</p>
             </div>
           </div>
         </div>
 
-        <div className="card bg-white shadow-xl border border-base-200 p-8 rounded-2xl">
-          <h3 className="text-xl font-semibold text-neutral mb-4">
+        <div className="card bg-base-100 shadow-xl border border-base-200 p-8 rounded-2xl hover:scale-[1.03] transition-all duration-300 hover:shadow-2xl">
+          <h3 className="text-xl font-semibold mb-4">
             A service that truly respects my time.
           </h3>
 
-          <p className="text-base text-neutral/70">
+          <p className="text-base text-accent">
             Every minute matters in my schedule — and Rent Wheel understood that.
             The car arrived early, the driver was attentive, and the
             ride felt like my own moving sanctuary.
           </p>
 
-          <div className="border-t border-base-200 my-6"></div>
+          <div className="border-t border-base-300 my-6"></div>
 
           <div className="flex items-center gap-4">
             <div className="avatar">
@@ -128,14 +128,14 @@ const Feedback = () => {
               </div>
             </div>
             <div>
-              <p className="font-semibold text-neutral">Dr. Enan</p>
-              <p className="text-neutral/60 text-sm">Rajshahi</p>
+              <p className="font-semibold">Dr. Enan</p>
+              <p className="text-accent text-sm">Rajshahi</p>
             </div>
           </div>
         </div>
       </div>
 
-      <p className="text-center mt-16">
+      <p data-aos="zoom-in" className="text-center mt-16">
         Real stories from satisfied travelers and VIP clients.
       </p>
     </section>

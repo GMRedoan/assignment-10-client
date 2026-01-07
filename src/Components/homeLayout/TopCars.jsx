@@ -1,3 +1,4 @@
+
 import React from "react";
  import { FaCalendarCheck, FaMoneyBillWave, FaShieldAlt, FaHeadset } from "react-icons/fa";
 
@@ -6,16 +7,16 @@ const TopCars = () => {
     <section className="px-6 pb-20 bg-base-200">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10">
-          <h3 className="text-3xl md:text-5xl font-extrabold mb-3">
+          <h3 data-aos="zoom-in" className="text-3xl md:text-5xl font-extrabold mb-3">
             Top <span className="text-primary">Cars</span> For You
           </h3>
-          <p className="text-accent max-w-2xl mx-auto">
+          <p data-aos="zoom-in" className="text-accent max-w-2xl mx-auto">
             Hand-picked vehicles — reliable, comfortable, and ready to go.
           </p>
         </div>
 
-         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-           <div className="border border-gray-300 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition transform duration-300 hover:-translate-y-3 bg-white">
+         <div data-aos="zoom-in" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+           <div className="border border-gray-300 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition transform duration-300 hover:scale-[1.03] bg-base-100">
             <div className="h-44 md:h-48 w-full overflow-hidden">
               <img
                 src="https://i.ibb.co.com/sJMjr1FB/2025-toyota-camry-xse-awd-123-66993cc94cc40.jpg"
@@ -34,19 +35,19 @@ const TopCars = () => {
             <div className="p-5">
               <h4 className="text-xl font-semibold mb-2">Toyota Camry</h4>
 
-              <div className="flex items-center text-sm text-gray-600 mb-4 gap-4">
+              <div className="flex items-center text-sm text-accent mb-4 gap-4">
                 <span>5 seats</span>
                 <span>• Automatic</span>
                 <span>• Petrol</span>
               </div>
 
-              <p className="text-gray-500 text-sm mb-5">
+              <p className="text-accent text-sm">
                 Well-maintained, comfortable, and perfect for city or highway travel.
               </p>
             </div>
           </div>
 
-          <div className="border border-gray-300 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition transform duration-300 hover:-translate-y-3 bg-white">
+          <div className="border border-gray-300 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition transform duration-300 hover:scale-[1.03] bg-base-100">
             <div className="relative h-44 md:h-48 w-full overflow-hidden">
               <img
                 src="https://i.ibb.co.com/DPymPPdk/a-Aur-RPIq-RLda-Bo-A-Nissan-X-Trail2025exteriorfrontthreequarterviewdriving.jpg"
@@ -65,19 +66,19 @@ const TopCars = () => {
             <div className="p-5">
               <h4 className="text-xl font-semibold mb-2">Nissan X-Trail</h4>
 
-              <div className="flex items-center text-sm text-gray-600 mb-4 gap-4">
+              <div className="flex items-center text-sm text-accent mb-4 gap-4">
                 <span>7 seats</span>
                 <span>• Automatic</span>
                 <span>• Diesel</span>
               </div>
 
-              <p className="text-gray-500 text-sm mb-5">
+              <p className="text-accent text-sm">
                 Spacious and powerful — ideal for family trips and long adventures.
               </p>
             </div>
           </div>
 
-          <div className="border border-gray-300 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition transform duration-300 hover:-translate-y-3 bg-white">
+          <div className="border border-gray-300 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition transform duration-300 hover:scale-[1.03] bg-base-100">
             <div className="relative h-44 md:h-48 w-full overflow-hidden">
               <img
                 src="https://i.ibb.co.com/prjwq1TL/2024-city-1-77eb-wm.png"
@@ -96,19 +97,19 @@ const TopCars = () => {
             <div className="p-5">
               <h4 className="text-xl font-semibold mb-2">Honda City</h4>
 
-              <div className="flex items-center text-sm text-gray-600 mb-4 gap-4">
+              <div className="flex items-center text-sm text-accent mb-4 gap-4">
                 <span>5 seats</span>
                 <span>• Manual</span>
                 <span>• Petrol</span>
               </div>
 
-              <p className="text-gray-500 text-sm mb-5">
+              <p className="text-accent text-sm">
                 Smooth handling and great mileage — perfect for daily use.
               </p>
              </div>
           </div>
 
-          <div className="border border-gray-300 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition transform duration-300 hover:-translate-y-3 bg-white">
+          <div className="border border-gray-300 rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition transform duration-300 hover:scale-[1.03] bg-base-100">
             <div className="relative h-44 md:h-48 w-full overflow-hidden">
               <img
                 src="https://i.ibb.co.com/xq2rXyvJ/public.jpg "
@@ -127,13 +128,13 @@ const TopCars = () => {
             <div className="p-5">
               <h4 className="text-xl font-semibold mb-2">Mazda Demio</h4>
 
-              <div className="flex items-center text-sm text-gray-600 mb-4 gap-4">
+              <div className="flex items-center text-sm text-accent mb-4 gap-4">
                 <span>4 seats</span>
                 <span>• Automatic</span>
                 <span>• Petrol</span>
               </div>
 
-              <p className="text-gray-500 text-sm mb-5">
+              <p className="text-accent text-sm ">
                 The Mazda Demio is a compact hatchback known for its fuel efficiency and nimble handling.
               </p>
              </div>

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 
@@ -7,10 +7,11 @@ import "swiper/css/effect-fade";
 
 const Slides = () => {
   return (
-    <div className="bg-base-200 pt-10 px-6">
+    <div className="bg-base-200 pt-10 md:px-12
+    ">
       {/* Heading */}
-      <div data-aos="zoom-in" className="md:py-20 text-center">
-        <h1 className="font-extrabold text-4xl md:text-6xl">
+      <div className="md:py-20 text-center">
+        <h1 data-aos="zoom-in" className="font-extrabold text-4xl md:text-6xl">
           Your Journey, Your <span className="text-primary">Wheels</span>
         </h1>
         <p data-aos="zoom-in" className="mt-6 text-accent max-w-3xl mx-auto">
@@ -19,7 +20,8 @@ const Slides = () => {
       </div>
 
       {/* Swiper */}
-      <div data-aos="zoom-in-down" className="rounded-2xl overflow-hidden shadow-xl md:mx-6">
+      <div data-aos="zoom-in-down" className="rounded-2xl overflow-hidden shadow-xl md:
+      mx-6">
         <Swiper
           modules={[Autoplay, EffectFade]}
           loop={true}
