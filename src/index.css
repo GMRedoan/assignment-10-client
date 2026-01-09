@@ -27,7 +27,10 @@
 
 /* Active link styling */
 a.active {
-  @apply font-semibold text-[#67AB4F] underline;
+  @apply font-semibold text-primary
+         bg-primary/15 backdrop-blur-md
+         px-2 py-1 rounded-full
+         border border-primary/30;
 }
 
 @keyframes floatSlow {

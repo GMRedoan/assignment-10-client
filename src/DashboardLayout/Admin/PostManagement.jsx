@@ -42,11 +42,11 @@ const PostManagement = () => {
     };
 
     return (
-        <div className="flex flex-col justify-center items-center py-10 pb-20 px-4 md:px-20">
+        <div className="flex flex-col justify-center items-center py-10 pb-20 px-6 md:px-20">
             <title>My Listings</title>
 
             <div className="pb-10">
-                <h2 className="text-3xl md:text-5xl font-bold text-center pb-5"> All Posting <span className='text-primary'>Car</span> Management
+                <h2 className="text-3xl md:text-5xl font-bold text-center pb-5"> All Posting Car <span className='text-primary'> Management</span>
                 </h2>
                 <p className="text-accent font-semibold text-center max-w-xl mx-auto">
                     Easily update your car info, check rental status, and keep your listings up to date.

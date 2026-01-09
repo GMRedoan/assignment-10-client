@@ -54,7 +54,7 @@ const BookingManagement = () => {
 
 
   return (
-    <div className="flex flex-col justify-center items-center py-10 pb-20 px-4 md:px-20">
+    <div className="flex flex-col justify-center items-center py-10 pb-20 px-6 md:px-20">
       <title>
         My Bookings
       </title>

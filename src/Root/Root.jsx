@@ -8,6 +8,28 @@ const Root = () => {
   const navigation = useNavigation()
   const location = useLocation();
   const [loading, setLoading] = useState(true)
+  const [theme, setTheme] = useState('dark')
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else {
+      // first visit → dark
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
+
 
   useEffect(() => {
     const delay = setTimeout(() => setLoading(false), 600)
@@ -21,7 +43,7 @@ const Root = () => {
   const showLoader = loading || navigation.state === 'loading';
   return (
     <div className="relative max-w-[1500px] mx-auto bg-base-200">
-      <Navbar />
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
 
       <Outlet />
 

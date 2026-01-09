@@ -223,7 +223,7 @@ const AllUser = () => {
                                         </div>
                                     </td>
 
-                                    <td className="text-sm text-gray-500">
+                                    <td className="text-sm text-accent">
                                         {user.email}
                                     </td>
 
