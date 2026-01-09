@@ -1,4 +1,4 @@
-import { use } from 'react';
+import { use, useEffect, useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router';
 import { AuthContext } from '../../provider/authContext';
 import Swal from 'sweetalert2';
@@ -7,8 +7,30 @@ import Theme from '../../Shared/Theme';
 
 const Navbar = () => {
     const navigate = useNavigate()
-    const { user, logout, userInfo
-    } = use(AuthContext)
+    const [show, setShow] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+    const { user, logout, userInfo} = use(AuthContext)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY && currentScrollY > 80) {
+                setShow(false);
+            } else {
+                setShow(true);
+                setTimeout(() => {
+                    4
+                })
+            }
+
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [lastScrollY]);
+
 
     const handleLogout = () => {
         logout()
@@ -26,7 +48,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="pr-4 md:px-6 flex justify-between items-center bg-base-200 sticky top-0 z-100">
+        <nav className={`pr-4 md:px-6 flex justify-between items-center bg-base-200 sticky top-0 z-100 ${show ? "translate-y-0" : "-translate-y-full"}`}>
             <div className="flex">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

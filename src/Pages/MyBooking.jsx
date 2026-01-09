@@ -87,10 +87,10 @@ const MyBooking = () => {
       </div>
 
       <div className="overflow-x-auto w-full rounded-xl shadow-xl">
-        <div className="min-w-[600px] bg-white">
-          <table className="table w-full bg-white">
+        <div className="min-w-[600px] bg-base-200">
+          <table className="table w-full">
             <thead>
-              <tr className="bg-gray-200 text-black md:text-[18px]">
+              <tr className="bg-gray-300 text-black md:text-[18px]">
                 <th className="md:pl-26">Car Name</th>
                 <th className="px-4 text-left">Car Type</th>
                 <th className="px-4 text-left">Rent Price</th>

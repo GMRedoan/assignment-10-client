@@ -119,13 +119,13 @@ const Profile = () => {
 
                             {!edit ? (
                                 <div className="mt-1 p-3 rounded-lg bg-base-200 text-sm">
-                                    {userInfo?.name || 'Not provided'}
+                                    {userInfo[name] || 'Not provided'}
                                 </div>
                             ) : (
                                 <input
                                     type="text"
                                     name={name}
-                                    value={formData?.name}
+                                    value={formData[name]}
                                     onChange={handleChange}
                                     className="input input-bordered w-full mt-1"
                                 />
@@ -138,7 +138,7 @@ const Profile = () => {
                     {!edit ? (
                         <button
                             onClick={() => setEdit(true)}
-                            className="btn btn-primary gap-2"
+                            className="btn btn-primary text-white gap-2"
                         >
                             <FaEdit /> Edit Profile
                         </button>

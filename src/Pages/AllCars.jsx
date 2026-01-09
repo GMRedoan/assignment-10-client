@@ -1,8 +1,8 @@
 import React, { use, useState } from "react";
 import NewCarsCard from "../Components/homeLayout/NewCarsCard";
-import Feedback from "../Components/homeLayout/Feedback";
 import Loading from "./Loading";
 import { IoSearchOutline } from "react-icons/io5";
+import PrivacyPolicy from "../Extra/PrivacyPolicy";
 
 const allCarsPromise = fetch(
   "https://rent-wheels-server-jet.vercel.app/cars"
@@ -10,6 +10,7 @@ const allCarsPromise = fetch(
 
 const AllCars = () => {
   const allCars = use(allCarsPromise);
+
 
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
@@ -146,7 +147,7 @@ console.log(filteredCars);
           ))}
         </div>
       )}
-      <Feedback />
+      <PrivacyPolicy></PrivacyPolicy>
     </div>
   );
 };

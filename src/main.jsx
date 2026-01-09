@@ -22,7 +22,10 @@ import PrivacyPolicy from './Extra/PrivacyPolicy.jsx';
 import DashBoardLayout from './DashboardLayout/DashboardLayout.jsx';
 import Dashboard from './DashboardLayout/Dashboard/Dashboard.jsx';
 import Profile from './DashboardLayout/Dashboard/Profile.jsx';
- 
+import UserRoutes from './Routes/UserRoutes.jsx';
+import AllUser from './DashboardLayout/Admin/AllUser.jsx';
+import AdminRoutes from './Routes/AdminRoutes.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,7 +46,7 @@ const router = createBrowserRouter([
       {
         path: '/allCars',
         element: <AllCars></AllCars>
-        },
+      },
       {
         path: '/login',
         element: <Login></Login>
@@ -53,15 +56,9 @@ const router = createBrowserRouter([
         element: <Registration></Registration>
       },
       {
-        path: '/myBooking',
-        element: <PrivateRoutes>
-          <MyBooking></MyBooking>
-        </PrivateRoutes>
-      },
-      {
         path: '/carDetails/:id',
         loader: ({ params }) => fetch(`https://rent-wheels-server-jet.vercel.app/cars/${params.id}`),
-        element:<CarDetails></CarDetails>,
+        element: <CarDetails></CarDetails>,
         hydrateFallbackElement: <Loading></Loading>
       },
       {
@@ -77,7 +74,7 @@ const router = createBrowserRouter([
         element: <PrivacyPolicy></PrivacyPolicy>
       },
       {
-        path:'/profile',
+        path: '/profile',
         element: <PrivateRoutes>
           <Profile></Profile>
         </PrivateRoutes>
@@ -85,25 +82,39 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path:'/dashboard',
-    element:<PrivateRoutes>
+    path: '/dashboard',
+    element: <PrivateRoutes>
       <DashBoardLayout></DashBoardLayout>
     </PrivateRoutes>,
-    children:[
+    children: [
       {
         index: true,
-        element:<Dashboard></Dashboard>
+        element: <Dashboard></Dashboard>
       },
       {
-        path:'profile',
-        element:<Profile></Profile>
+        path: 'profile',
+        element: <Profile></Profile>
       },
-            {
+      {
         path: 'myListing',
-        element: <PrivateRoutes>
+        element: <UserRoutes>
           <MyListing></MyListing>
-        </PrivateRoutes>
+        </UserRoutes>
       },
+      {
+        path: 'myBooking',
+        element: <UserRoutes>
+          <MyBooking></MyBooking>
+        </UserRoutes>
+      },
+      {
+        path: 'all-users',
+        element: <AdminRoutes>
+          <AllUser></AllUser>
+        </AdminRoutes>,
+        loader: ()=> fetch("https://rent-wheels-server-jet.vercel.app/users"),
+        hydrateFallbackElement:<Loading></Loading>
+      }
     ]
   },
   {
@@ -115,7 +126,7 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
-            <RouterProvider router={router} />
-     </AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>,
 )

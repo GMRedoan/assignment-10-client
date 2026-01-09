@@ -3,11 +3,11 @@ import { Link } from "react-router";
 const PrivacyPolicy = () => {
     return (
         <section className="bg-base-200 py-20 overflow-hidden">
-            <div className="max-w-5xl mx-auto px-4">
+            <div className="mx-4 md:mx-18 px-4">
 
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-6xl font-bold">
+                    <h1 className="text-4xl md:text-5xl font-bold">
                         Privacy <span className="text-primary">Policy</span>
                     </h1>
                     <p className="mt-6 text-accent max-w-3xl mx-auto">
@@ -122,6 +122,7 @@ const PrivacyPolicy = () => {
                         Back to home
                     </Link>
                 </div>
+
 
 
                 <p className="text-center text-sm text-gray-500 mt-10">

@@ -1,7 +1,6 @@
 import { NavLink, Link, useNavigate } from "react-router";
-import { FaHome, FaUser, FaSignOutAlt, FaUsers } from "react-icons/fa";
-import { LuGitPullRequestDraft } from "react-icons/lu";
-import { IoCreateOutline, IoDocuments } from "react-icons/io5";
+import { FaHome, FaUser, FaSignOutAlt, FaUsers, FaListUl } from "react-icons/fa";
+import { IoBookmarks, IoDocuments } from "react-icons/io5";
 import { ImCross } from "react-icons/im";
 import { MdDashboard } from "react-icons/md";
 import { use } from "react";
@@ -32,15 +31,15 @@ const Aside = ({ openSidebar, setOpenSidebar }) => {
     const UserMenuItems = [
         { path: "/dashboard", label: "Dashboard", icon: <MdDashboard /> },
         { path: "/dashboard/profile", label: "My Profile", icon: <FaUser /> },
-        { path: "/dashboard/myListing", label: "My Listing", icon: <LuGitPullRequestDraft /> },
-        { path: "/dashboard/create-donation-request", label: "Create Donation Req", icon: <IoCreateOutline /> },
+        { path: "/dashboard/myListing", label: "My Listing", icon: <FaListUl /> },
+        { path: "/dashboard/myBooking", label: "My Bookings", icon: <IoBookmarks /> },
     ]
 
     const AdminMenuItems = [
         { path: "/dashboard", label: "Dashboard", icon: <MdDashboard /> },
         { path: "/dashboard/profile", label: "My Profile", icon: <FaUser /> },
         { path: "/dashboard/all-users", label: "All Users", icon: <FaUsers /> },
-        { path: "/dashboard/all-bookings", label: "Bookings", icon: <IoDocuments /> },
+        { path: "/dashboard/all-bookings", label: "All Bookings", icon: <IoDocuments /> },
     ]
 
 
@@ -57,7 +56,7 @@ const Aside = ({ openSidebar, setOpenSidebar }) => {
             )}
 
             <aside
-                className={`fixed top-0 left-0 z-50 h-full w-70 bg-base-200 shadow-2xl p-5
+                className={`fixed top-0 left-0 z-50 h-full w-73 bg-base-200 shadow-2xl p-5
                 transform transition-transform duration-300
                 ${openSidebar ? "translate-x-0" : "-translate-x-full"}`}
             >
@@ -93,8 +92,8 @@ const Aside = ({ openSidebar, setOpenSidebar }) => {
                                 className={({ isActive }) =>
                                     `flex items-center gap-3 font-medium py-2 px-4 rounded-md
                                     ${isActive
-                                        ? "bg-primary text-white"
-                                        : "hover:bg-base-300"}`
+                                        ? "bg-primary text-base-300"
+                                        : "hover:bg-accent"}`
                                 }
                             >
                                 <span className="text-lg">{item.icon}</span>

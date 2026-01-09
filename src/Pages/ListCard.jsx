@@ -44,11 +44,11 @@ const ListCard = ({ singleList, handleDelate }) => {
   }
   return (
     <tr>
-      <td className="md:pl-35 font-semibold text-black">{singleList.carName}</td>
+      <td className="md:pl-35 font-semibold text-base-300">{singleList.carName}</td>
 
-      <td className="text-black">{singleList.carType}</td>
+      <td className="text-base-300">{singleList.carType}</td>
 
-      <td className="font-semibold text-black">
+      <td className="font-semibold text-base-300">
         ৳{singleList.rentPricePerDay}<span className="text-accent">/day</span>
       </td>
 
@@ -71,7 +71,7 @@ const ListCard = ({ singleList, handleDelate }) => {
             <div className="max-w-7xl mx-auto">
 
               {/* form start here */}
-              <form onSubmit={handleUpdate} className="bg-white rounded-2xl p-8 shadow-xl">
+              <form onSubmit={handleUpdate} className="bg-base-100 rounded-2xl p-8 shadow-xl">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div>
                     <label className="label">
@@ -143,7 +143,7 @@ const ListCard = ({ singleList, handleDelate }) => {
                       readOnly
                       name="providerName"
                       defaultValue={user.displayName}
-                      className="input input-bordered w-full bg-gray-50"
+                      className="input input-bordered w-full bg-base-100"
                     />
                   </div>
 
@@ -155,7 +155,7 @@ const ListCard = ({ singleList, handleDelate }) => {
                       readOnly
                       name="email"
                       defaultValue={user.email}
-                      className="input input-bordered w-full bg-gray-50" />
+                      className="input input-bordered w-full bg-base-100" />
                   </div>
 
                 </div>

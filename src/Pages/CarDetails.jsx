@@ -111,8 +111,8 @@ const CarDetails = () => {
                                 <FaMapMarkerAlt /> {car.location}
                             </div>
 
-                            <div className="bg-gray-100 rounded-xl p-3 space-y-1">
-                                <p className="flex items-center gap-2 font-medium text-base-100">
+                            <div className="bg-base-200 rounded-xl p-3 space-y-1">
+                                <p className="flex items-center gap-2 font-medium text-base-300">
                                     <FaUser /> {car.providerName}
                                 </p>
                                 <p className="flex items-center gap-2 text-blue-600">
