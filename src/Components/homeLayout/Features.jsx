@@ -23,7 +23,7 @@ const Features = () => {
         
         {/* Left Features */}
         <div className="space-y-12">
-          <div data-aos="fade-right" className="flex gap-6">
+          <div data-aos="zoom-in" className="flex gap-6">
             <div className="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 text-primary text-2xl">
               <FaClock />
             </div>
@@ -35,7 +35,7 @@ const Features = () => {
             </div>
           </div>
 
-          <div data-aos="fade-right" data-aos-delay="100" className="flex gap-6">
+          <div data-aos="zoom-in" data-aos-delay="100" className="flex gap-6">
             <div className="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 text-primary text-2xl">
               <FaMoneyBillWave />
             </div>
@@ -47,7 +47,7 @@ const Features = () => {
             </div>
           </div>
 
-          <div data-aos="fade-right" data-aos-delay="200" className="flex gap-6">
+          <div data-aos="zoom-in" data-aos-delay="200" className="flex gap-6">
             <div className="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 text-primary text-2xl">
               <FaCarAlt />
             </div>
@@ -59,7 +59,7 @@ const Features = () => {
             </div>
           </div>
 
-          <div data-aos="fade-right" data-aos-delay="300" className="flex gap-6">
+          <div data-aos="zoom-in" data-aos-delay="300" className="flex gap-6">
             <div className="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 text-primary text-2xl">
               <FaUserShield />
             </div>
@@ -73,7 +73,7 @@ const Features = () => {
         </div>
 
         {/* Right Visual */}
-        <div data-aos="fade-left" className="relative">
+        <div data-aos="zoom-in" className="relative">
           <img
             src="https://images.unsplash.com/photo-1503376780353-7e6692767b70"
             alt="Car"

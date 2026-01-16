@@ -3,7 +3,7 @@ import { FaCar, FaComments, FaFlag, FaHeart } from "react-icons/fa";
 const Feedback = () => {
   return (
 <div className="pt-5 pb-15 bg-base-200">
-      <section data-aos="zoom-in" className="rounded-xl py-10 mx-4 md:mx-0 md:py-20 mb-20 bg-gray-300">
+      <section  className="rounded-xl py-10 mx-4 md:mx-0 md:py-20 mb-20 bg-base-100 shadow-xl">
       <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center px-6">
           <div className="group transition duration-300 cursor-pointer hover:scale-[1.03]">
           <FaHeart className="text-6xl mx-auto text-accent group-hover:text-primary transition duration-300" />

@@ -5,7 +5,6 @@ import Swal from 'sweetalert2';
 
 const Profile = () => {
     const { userInfo, setUserInfo } = use(AuthContext);
-
     const [edit, setEdit] = useState(false);
     const [loading, setLoading] = useState(false);
 
@@ -102,7 +101,7 @@ const Profile = () => {
 
                     <div className="text-center mt-6">
                         <h2 className="text-3xl font-bold">{userInfo?.name}</h2>
-                        <p className="text-sm opacity-70">{userInfo?.email}</p>
+                        <p className="text-sm text-black z-50 font-semibold opacity-70">{userInfo?.email}</p>
                     </div>
                 </div>
 

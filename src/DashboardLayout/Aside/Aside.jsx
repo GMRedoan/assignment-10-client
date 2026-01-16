@@ -95,7 +95,7 @@ const Aside = ({ openSidebar, setOpenSidebar }) => {
         </button>
 
         <Link to="/" className="flex justify-center">
-          <img src={logo} alt="Logo" className="w-20 md:w-28" />
+          <img src={logo} alt="Logo" className="w-24 md:w-28" />
         </Link>
 
         <div className="flex justify-center mt-2">
@@ -135,11 +135,11 @@ const Aside = ({ openSidebar, setOpenSidebar }) => {
             </li>
           ))}
 
-          <li className="mt-80 md:mt-40">
+          <li className="mt-52 md:mt-40">
             <Link
               to="/"
               onClick={() => setIsNavigating(true)}
-              className="flex items-center gap-3 py-2 px-4 rounded-md
+              className="flex items-center px-4 rounded-md
                          text-primary font-semibold hover:bg-base-200"
             >
               <FaHome />
@@ -148,7 +148,7 @@ const Aside = ({ openSidebar, setOpenSidebar }) => {
 
             <button
               onClick={handleLogout}
-              className="flex items-center gap-3 py-2 px-4 rounded-md
+              className="flex items-center px-4 rounded-md
                          text-primary font-semibold hover:bg-base-200 w-full text-left"
             >
               <FaSignOutAlt />

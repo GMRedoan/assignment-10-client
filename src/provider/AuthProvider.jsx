@@ -61,9 +61,18 @@ const AuthProvider = ({ children }) => {
         if (!user?.email) return;
 
         fetch(`https://rent-wheels-server-jet.vercel.app/role/${user.email}`)
-            .then(res => res.json())
-            .then(data => setUserInfo(data))
-            .catch(err => console.error(err));
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
+                return res.json();
+            })
+            .then(data => {
+                if (data) {
+                    setUserInfo(data);
+                }
+            })
+            .catch(err => console.error("Role fetch error:", err));
 
     }, [user?.email]);
 

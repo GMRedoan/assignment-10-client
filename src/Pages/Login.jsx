@@ -58,7 +58,9 @@ const Login = () => {
                 const newUser = {
                     name: result.user.displayName,
                     email: result.user.email,
-                    photoURL: result.user.photoURL
+                    photoURL: result.user.photoURL,
+                    role:"user",
+                    status:'active'
                 }
 
                 // save user info in the database by google login

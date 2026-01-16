@@ -44,7 +44,7 @@ const Statistics = () => {
             Monthly Bookings Growth
           </h3>
 
-          <div className="h-[300px]">
+          <div className="h-75 w-full">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={statsData}>
                 <CartesianGrid strokeDasharray="3 3" />
@@ -74,7 +74,7 @@ const Statistics = () => {
             Monthly Revenue (K BDT)
           </h3>
 
-          <div className="h-[300px]">
+          <div className="h-75">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={statsData}>
                 <CartesianGrid strokeDasharray="3 3" />

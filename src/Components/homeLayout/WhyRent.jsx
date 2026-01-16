@@ -4,7 +4,7 @@ const WhyRent = () => {
   return (
     <div className="flex flex-col md:flex-row items-center gap-8 py-12 md:py-24 bg-base-200 mx-4 md:mx-18">
       {/* Text Section */}
-      <div data-aos="fade-right" className="md:w-1/2">
+      <div data-aos="zoom-in" className="md:w-1/2">
         <h2 className="text-3xl md:text-4xl font-semibold mb-8">
           Why <span className="text-primary">Rent</span> With Us?
         </h2>
@@ -49,7 +49,7 @@ const WhyRent = () => {
       </div>
 
       {/* Image Section */}
-      <div data-aos="fade-left" className="md:w-1/2 mt-10 md:mt-0">
+      <div data-aos="zoom-in" className="md:w-1/2 mt-10 md:mt-0">
         <img
           src="https://i.ibb.co.com/npjpyQm/Whats-App-Image-2022-02-10-at-6-34-43-PM.jpg"
           alt="Luxury Car"

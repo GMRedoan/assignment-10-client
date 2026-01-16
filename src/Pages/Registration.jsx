@@ -44,7 +44,8 @@ const Registration = () => {
                     photoURL,
                     phoneNumber,
                     location,
-                    role: 'user'
+                    role: 'user',
+                    status:'active'
                 }
                 // create user in the database
                 fetch('https://rent-wheels-server-jet.vercel.app/users', {
@@ -88,7 +89,8 @@ const Registration = () => {
                     email: result.user.email,
                     photoURL: result.user.photoURL,
                     location,
-                    role: 'user'
+                    role: 'user',
+                    status:'active'
                 }
 
                 // save user info in the database by google login

@@ -18,7 +18,7 @@ const GetInTouch = () => {
         
         {/* Left Info */}
         <div className="space-y-10">
-          <div data-aos="fade-right" className="flex gap-6 items-start">
+          <div data-aos="zoom-in" className="flex gap-6 items-start">
             <div className="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 text-primary text-2xl">
               <FaPhoneAlt />
             </div>
@@ -29,7 +29,7 @@ const GetInTouch = () => {
             </div>
           </div>
 
-          <div data-aos="fade-right" data-aos-delay="100" className="flex gap-6 items-start">
+          <div data-aos="zoom-in" data-aos-delay="100" className="flex gap-6 items-start">
             <div className="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 text-primary text-2xl">
               <FaEnvelope />
             </div>
@@ -40,7 +40,7 @@ const GetInTouch = () => {
             </div>
           </div>
 
-          <div data-aos="fade-right" data-aos-delay="200" className="flex gap-6 items-start">
+          <div data-aos="zoom-in" data-aos-delay="200" className="flex gap-6 items-start">
             <div className="w-14 h-14 flex items-center justify-center rounded-full bg-primary/10 text-primary text-2xl">
               <FaMapMarkerAlt />
             </div>
@@ -53,7 +53,7 @@ const GetInTouch = () => {
         </div>
 
         {/* Right Form */}
-        <div data-aos="fade-left" className="card bg-base-100 shadow-xl p-10 rounded-2xl">
+        <div data-aos="zoom-in" className="card bg-base-100 shadow-xl p-10 rounded-2xl">
           <form className="space-y-6">
             <div>
               <label className="label">
